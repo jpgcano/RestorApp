@@ -20,6 +20,11 @@ export async function  router(){
         document.querySelector("#app").innerHTML = "<h1>404 - No encontrado</h1>";
     }
 
+    const viewhandlers ={
+        "login":initlogin
+    }
+
+
     console.log("router.js exitoso");
 }
 

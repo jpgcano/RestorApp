@@ -1,0 +1,61 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Admin Principal",
+            "email": "admin@restorapp.com",
+            "password": "admin123",
+            "role": "admin"
+        },
+        {
+            "id": 2,
+            "name": "Juan Perez",
+            "email": "juan@correo.com",
+            "password": "user123",
+            "role": "user"
+        }
+    ],
+    "menu": [
+        {
+            "id": 101,
+            "name": "Hamburguesa Clásica",
+            "price": 15000,
+            "category": "Plato Fuerte"
+        },
+        {
+            "id": 102,
+            "name": "Papas Fritas",
+            "price": 8000,
+            "category": "Acompañamiento"
+        },
+        {
+            "id": 103,
+            "name": "Limonada Natural",
+            "price": 5000,
+            "category": "Bebidas"
+        }
+    ],
+    "orders": [
+        {
+            "id": 1001,
+            "userId": 2,
+            "items": [
+                {
+                    "productId": 101,
+                    "name": "Hamburguesa Clásica",
+                    "quantity": 1,
+                    "subtotal": 15000
+                },
+                {
+                    "productId": 103,
+                    "name": "Limonada Natural",
+                    "quantity": 2,
+                    "subtotal": 10000
+                }
+            ],
+            "total": 25000,
+            "status": "pendiente",
+            "createdAt": "2026-01-26T14:30:00Z"
+        }
+    ]
+}
