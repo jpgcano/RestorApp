@@ -1,4 +1,4 @@
-import { router } from "./src/router/router";
+import { router } from "./src/router/router.js";
 
 
 

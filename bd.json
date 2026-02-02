@@ -1,61 +1,302 @@
 {
-    "users": [
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin Principal",
+      "email": "admin@restorapp.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "name": "Juan Perez",
+      "email": "juan@correo.com",
+      "password": "user123",
+      "role": "user"
+    }
+  ],
+  "menu": [
+    {
+      "id": "101",
+      "name": "Hamburguesa Clásica",
+      "price": 15000,
+      "category": "Plato Fuerte"
+    },
+    {
+      "id": "102",
+      "name": "Papas Fritas",
+      "price": 8000,
+      "category": "Acompañamiento"
+    },
+    {
+      "id": "103",
+      "name": "Limonada Natural",
+      "price": 5000,
+      "category": "Bebidas"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1001",
+      "userId": 2,
+      "items": [
         {
-            "id": 1,
-            "name": "Admin Principal",
-            "email": "admin@restorapp.com",
-            "password": "admin123",
-            "role": "admin"
+          "productId": 101,
+          "name": "Hamburguesa Clásica",
+          "quantity": 1,
+          "subtotal": 15000
         },
         {
-            "id": 2,
-            "name": "Juan Perez",
-            "email": "juan@correo.com",
-            "password": "user123",
-            "role": "user"
+          "productId": 103,
+          "name": "Limonada Natural",
+          "quantity": 2,
+          "subtotal": 10000
         }
-    ],
-    "menu": [
+      ],
+      "total": 25000,
+      "status": "preparando",
+      "createdAt": "2026-01-26T14:30:00Z"
+    },
+    {
+      "id": 1770000430404,
+      "userId": "2",
+      "items": [
         {
-            "id": 101,
-            "name": "Hamburguesa Clásica",
-            "price": 15000,
-            "category": "Plato Fuerte"
+          "id": "101",
+          "name": "Hamburguesa Clásica",
+          "price": 15000,
+          "category": "Plato Fuerte",
+          "tempId": 1770000427107
         },
         {
-            "id": 102,
-            "name": "Papas Fritas",
-            "price": 8000,
-            "category": "Acompañamiento"
+          "id": "101",
+          "name": "Hamburguesa Clásica",
+          "price": 15000,
+          "category": "Plato Fuerte",
+          "tempId": 1770000427418
         },
         {
-            "id": 103,
-            "name": "Limonada Natural",
-            "price": 5000,
-            "category": "Bebidas"
-        }
-    ],
-    "orders": [
+          "id": "102",
+          "name": "Papas Fritas",
+          "price": 8000,
+          "category": "Acompañamiento",
+          "tempId": 1770000428068
+        },
         {
-            "id": 1001,
-            "userId": 2,
-            "items": [
-                {
-                    "productId": 101,
-                    "name": "Hamburguesa Clásica",
-                    "quantity": 1,
-                    "subtotal": 15000
-                },
-                {
-                    "productId": 103,
-                    "name": "Limonada Natural",
-                    "quantity": 2,
-                    "subtotal": 10000
-                }
-            ],
-            "total": 25000,
-            "status": "pendiente",
-            "createdAt": "2026-01-26T14:30:00Z"
+          "id": "102",
+          "name": "Papas Fritas",
+          "price": 8000,
+          "category": "Acompañamiento",
+          "tempId": 1770000428306
+        },
+        {
+          "id": "102",
+          "name": "Papas Fritas",
+          "price": 8000,
+          "category": "Acompañamiento",
+          "tempId": 1770000428457
+        },
+        {
+          "id": "103",
+          "name": "Limonada Natural",
+          "price": 5000,
+          "category": "Bebidas",
+          "tempId": 1770000429314
+        },
+        {
+          "id": "103",
+          "name": "Limonada Natural",
+          "price": 5000,
+          "category": "Bebidas",
+          "tempId": 1770000429491
+        },
+        {
+          "id": "103",
+          "name": "Limonada Natural",
+          "price": 5000,
+          "category": "Bebidas",
+          "tempId": 1770000429675
         }
-    ]
+      ],
+      "total": 69000,
+      "status": "pendiente",
+      "createdAt": "2026-02-02T02:47:10.404Z"
+    },
+    {
+      "id": 1770000435068,
+      "userId": "2",
+      "items": [
+        {
+          "id": "101",
+          "name": "Hamburguesa Clásica",
+          "price": 15000,
+          "category": "Plato Fuerte",
+          "tempId": 1770000432395
+        },
+        {
+          "id": "101",
+          "name": "Hamburguesa Clásica",
+          "price": 15000,
+          "category": "Plato Fuerte",
+          "tempId": 1770000432579
+        },
+        {
+          "id": "101",
+          "name": "Hamburguesa Clásica",
+          "price": 15000,
+          "category": "Plato Fuerte",
+          "tempId": 1770000432746
+        },
+        {
+          "id": "102",
+          "name": "Papas Fritas",
+          "price": 8000,
+          "category": "Acompañamiento",
+          "tempId": 1770000433348
+        },
+        {
+          "id": "102",
+          "name": "Papas Fritas",
+          "price": 8000,
+          "category": "Acompañamiento",
+          "tempId": 1770000433531
+        },
+        {
+          "id": "103",
+          "name": "Limonada Natural",
+          "price": 5000,
+          "category": "Bebidas",
+          "tempId": 1770000434251
+        },
+        {
+          "id": "103",
+          "name": "Limonada Natural",
+          "price": 5000,
+          "category": "Bebidas",
+          "tempId": 1770000434449
+        }
+      ],
+      "total": 71000,
+      "status": "pendiente",
+      "createdAt": "2026-02-02T02:47:15.068Z"
+    },
+    {
+      "id": 1770001122886,
+      "userId": "1",
+      "items": [
+        {
+          "id": "101",
+          "name": "Hamburguesa Clásica",
+          "price": 15000,
+          "category": "Plato Fuerte",
+          "tempId": 1770001120374
+        },
+        {
+          "id": "102",
+          "name": "Papas Fritas",
+          "price": 8000,
+          "category": "Acompañamiento",
+          "tempId": 1770001121237
+        },
+        {
+          "id": "103",
+          "name": "Limonada Natural",
+          "price": 5000,
+          "category": "Bebidas",
+          "tempId": 1770001122045
+        }
+      ],
+      "total": 28000,
+      "status": "pendiente",
+      "createdAt": "2026-02-02T02:58:42.886Z"
+    },
+    {
+      "id": 1770001126902,
+      "userId": "1",
+      "items": [
+        {
+          "id": "101",
+          "name": "Hamburguesa Clásica",
+          "price": 15000,
+          "category": "Plato Fuerte",
+          "tempId": 1770001124430
+        },
+        {
+          "id": "102",
+          "name": "Papas Fritas",
+          "price": 8000,
+          "category": "Acompañamiento",
+          "tempId": 1770001125229
+        },
+        {
+          "id": "102",
+          "name": "Papas Fritas",
+          "price": 8000,
+          "category": "Acompañamiento",
+          "tempId": 1770001125453
+        },
+        {
+          "id": "102",
+          "name": "Papas Fritas",
+          "price": 8000,
+          "category": "Acompañamiento",
+          "tempId": 1770001125621
+        },
+        {
+          "id": "103",
+          "name": "Limonada Natural",
+          "price": 5000,
+          "category": "Bebidas",
+          "tempId": 1770001126149
+        },
+        {
+          "id": "103",
+          "name": "Limonada Natural",
+          "price": 5000,
+          "category": "Bebidas",
+          "tempId": 1770001126349
+        }
+      ],
+      "total": 49000,
+      "status": "pendiente",
+      "createdAt": "2026-02-02T02:58:46.902Z"
+    },
+    {
+      "id": 1770001425100,
+      "userId": "2",
+      "items": [
+        {
+          "id": "102",
+          "name": "Papas Fritas",
+          "price": 8000,
+          "category": "Acompañamiento",
+          "tempId": 1770001422931
+        },
+        {
+          "id": "101",
+          "name": "Hamburguesa Clásica",
+          "price": 15000,
+          "category": "Plato Fuerte",
+          "tempId": 1770001423635
+        },
+        {
+          "id": "103",
+          "name": "Limonada Natural",
+          "price": 5000,
+          "category": "Bebidas",
+          "tempId": 1770001424236
+        },
+        {
+          "id": "103",
+          "name": "Limonada Natural",
+          "price": 5000,
+          "category": "Bebidas",
+          "tempId": 1770001424427
+        }
+      ],
+      "total": 33000,
+      "status": "pendiente",
+      "createdAt": "2026-02-02T03:03:45.100Z"
+    }
+  ]
 }

@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1" ,
-    "dev": "vite"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "db": "json-server --watch db.json --port 3000"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.17.1"
+  "packageManager": "pnpm@10.17.1",
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
 }

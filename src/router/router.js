@@ -1,32 +1,46 @@
+import { LoginComponent } from "../componentS/logincomponent.js";
+import { MenuComponent } from "../componentS/menuComponent.js"; 
+import { ProfileComponent } from "../componentS/ProfileComponent.js";
+import { AdminComponent } from "../componentS/adminComponent.js";
 const routes = {
-    "login": "./src/view/login.html"
+    "login": new LoginComponent(),
+    "menu": new MenuComponent(), 
+    "profile": new ProfileComponent(),
+    "admin": new AdminComponent()
+};
 
-}
-
-export async function  router(){
+// 3. Agrega 'async' a la función router
+export async function router() {
+    const user = JSON.parse(localStorage.getItem('currentUser'));
     const hash = location.hash || "#/login";
     const path = hash.split('/')[1] || "login";
+
+    // PROTECCIÓN DE RUTAS (Impecable)
+    if (!user && path !== "login") {
+        window.location.hash = "#/login";
+        return;
+    }
+
+    if (user && path === "admin" && user.role !== "admin") {
+        alert("Acceso denegado: No eres administrador");
+        window.location.hash = "#/menu";
+        return;
+    }
+
+    const component = routes[path];
+    const appContainer = document.querySelector("#app");
     
-    const route = routes[path];
+    if (!appContainer) return;
 
-    try {
-        const response = await fetch(route);
-        if (!response.ok) throw new Error("Página no encontrada");
-        const html = await response.text(); 
-        const render = document.querySelector("#app");
-        render.innerHTML = html;
-    } catch (error) {
-        console.error("Error en el router:", error);
-        document.querySelector("#app").innerHTML = "<h1>404 - No encontrado</h1>";
+    if (component) {
+        // 4. USA AWAIT AQUÍ: fundamental para que carguen los datos del JSON
+        appContainer.innerHTML = await component.render(); 
+
+        // 5. Ejecutamos la lógica
+        component.init();
+    } else {
+        appContainer.innerHTML = "<h1>404 - Página no encontrada</h1>";
     }
 
-    const viewhandlers ={
-        "login":initlogin
-    }
-
-
-    console.log("router.js exitoso");
+    console.log(`Navegando a: ${path}`);
 }
-
-
-

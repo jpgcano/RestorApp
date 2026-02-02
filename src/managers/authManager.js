@@ -1,28 +1,27 @@
 import { fetchUser } from "../services/dataServices";
 
-export class AuthManager{
-    async login(email){
+export class AuthManager {
+    async login(email) {
         const users = await fetchUser();
         //buscar por email
-        const user = users.find(u => u.email.users.toLowerCase() === email.toLowerCase());
-
-        if (user){
-            this.saveSession(user);
-            return user;
-        }else{
+        const foundUser = users.find(u => u.email.toLowerCase() === email.trim().toLowerCase());
+        if (foundUser) {
+            this.saveSession(foundUser);
+            return foundUser;
+        } else {
             return null; //usuario no encontrado
         }
 
     }
 
-    saveSession(user){
+    saveSession(user) {
         localStorage.setItem('currentUser', JSON.stringify(user));
     }
-    getCurrentUser(){
+    getCurrentUser() {
         return JSON.parse(localStorage.getItem('currentUser'));
     }
-    logout(){
+    logout() {
         localStorage.removeItem('currentUser');
-        window.location.href="./src/view/login.html"
+        window.location.href = "./src/view/login.html"
     }
 }
